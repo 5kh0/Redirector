@@ -21,11 +21,11 @@
 
     <script>
         function generateLink() {
-            const url = document.getElementById('urlInput').value;
+            const url = document.getElementById('urlInput').value.trim();
             const outputDiv = document.getElementById('output');
 
             if (url) {
-                // Set the correct path for redirect.html
+                // Directly create the generated link for redirect.html
                 const generatedLink = `https://5kh0.github.io/Redirector/redirect.html?target=${encodeURIComponent(url)}`;
                 outputDiv.innerHTML = `<p>Generated Link: <a href="${generatedLink}" target="_blank">${generatedLink}</a></p>`;
             } else {
