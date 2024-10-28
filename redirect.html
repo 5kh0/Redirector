@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        function redirect() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const target = urlParams.get('target');
+            if (target) {
+                window.location.href = decodeURIComponent(target);
+            } else {
+                document.body.innerHTML = '<p>No URL provided to redirect.</p>';
+            }
+        }
+    </script>
+</head>
+<body onload="redirect()">
+</body>
+</html>
