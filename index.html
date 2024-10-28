@@ -25,8 +25,8 @@
             const outputDiv = document.getElementById('output');
 
             if (url) {
-                // Correctly format the generated link
-                const generatedLink = `${window.location.origin}/redirect.html?target=${encodeURIComponent(url)}`;
+                // Set the correct path for redirect.html
+                const generatedLink = `https://5kh0.github.io/Redirector/redirect.html?target=${encodeURIComponent(url)}`;
                 outputDiv.innerHTML = `<p>Generated Link: <a href="${generatedLink}" target="_blank">${generatedLink}</a></p>`;
             } else {
                 outputDiv.innerHTML = "<p>Please enter a URL.</p>";
